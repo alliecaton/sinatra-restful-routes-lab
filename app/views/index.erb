@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<html>
+
+<p>
+    <% @recipes.map do |recipe| %>
+    <%= "#{recipe.name} - #{recipe.ingredients} - #{recipe.cook_time.to_s}" %>
+    <a href=<%="/recipes/#{recipe.id}"%>>See Recipe</a>
+    <% end %>
+</p>
+
+</html>
